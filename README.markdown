@@ -22,35 +22,7 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 - **Battery Monitoring**: Voltage monitored via **AN6** (ADC channel 6) for low battery detection.  
 
 ### Buttons  
-- **MODE**: **RB0** – Cycles through modes (0 → 1 → 2 → 3 → 4 → 0).  
-- **OK**: **RB1** – Confirms settings and advances to the next step.  
-- **INCREASE (TĂNG)**: **RB2** – Increments the current value; wraps to minimum if maximum is exceeded.  
-- **SNOOZE/LED**: **RB3** – Dual-purpose:  
-  - Stops the alarm and snoozes for 10 minutes when ringing.  
-  - Toggles the lighting LED in Mode 0.  
-- *Note*: All buttons are debounced with a 20ms delay to prevent false triggers.  
-
-### Power  
-- **5V DC Supply**: Powers the system, with sleep mode activated when battery level drops below 30%.  
-
----
-
-## Project Overview  
-This digital clock showcases a blend of timekeeping, temperature monitoring, and alarm functionality on a PIC16F887 microcontroller. Programmed in C using the PIC C Compiler, it features a 6-digit 7-segment display and supports five operational modes. The design includes automatic day-of-the-week calculation via Zeller’s Congruence and a low-power sleep mode for battery conservation.  
-
----
-
-## Modes of Operation  
-
-### Mode 0: Current Time  
-- **Display**: `HH:MM:SS` (e.g., 12:34:56).  
-- Updates every second via Timer1 interrupt.  
-- Press **SNOOZE/LED** to toggle the lighting LED on **C5**.  
-
-### Mode 1: Date and Day  
-- **Display**: `TX:DD:MM` (e.g., T3:15:08 for Tuesday, August 15).  
-- **TX** represents the day of the week:  
-  - `CN`: Sunday  
+- **MODE**: **RB0** – Cycles through modes (0 → 1 → 2 → 3 →Cn`: Sunday  
   - `T2`: Monday  
   - `T3`: Tuesday  
   - `T4`: Wednesday  
