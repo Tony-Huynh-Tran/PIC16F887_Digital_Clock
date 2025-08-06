@@ -37,13 +37,13 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 
 ### Mode 3: Set Alarm  
 - **Display**: `T-:HH:MM` (e.g., T-:07:30 for 7:30 AM).  
-- Edit with **INCREASE** and confirm with **OK**.  
+- Edit with **UP** and confirm with **OK**.  
 - Buzzer on **E2** triggers when time matches; press **SNOOZE/LED** to snooze for 10 minutes.  
 
 ### Mode 4: Set Time and Date  
 - **Step 1**: Set time (`HH:MM:SS`).  
 - **Step 2**: Set date (`DD:MM:YY`).  
-- Edit with **INCREASE** and confirm with **OK**.  
+- Edit with **UP** and confirm with **OK**.  
 - Day of the week is auto-calculated after date setting.  
 
 ---
@@ -51,7 +51,7 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 ## Button Functions  
 - **MODE**: Switches between modes in a loop.  
 - **OK**: Saves the current value and moves to the next editable field.  
-- **INCREASE**: Increments the selected value; wraps around to minimum if maximum is exceeded.  
+- **UP**: Increments the selected value; wraps around to minimum if maximum is exceeded.  
 - **SNOOZE/LED**:  
   - When alarm rings: Stops buzzer and snoozes for 10 minutes.  
   - In Mode 0: Toggles the LED on **C5**.  
@@ -81,16 +81,16 @@ void quet_led(unsigned int8 d1, unsigned int8 d2, unsigned int8 d3, unsigned int
 
 ## Setting Time and Date  
 1. Enter Mode 4 with **MODE**.  
-2. Press **INCREASE** to start editing.  
-3. Adjust `HH:MM:SS`, then `DD:MM:YY` using **INCREASE** and **OK**.  
+2. Press **UP** to start editing.  
+3. Adjust `HH:MM:SS`, then `DD:MM:YY` using **UP** and **OK**.  
 4. After setting the year, the system validates the date and calculates the day of the week using Zeller’s Congruence.  
 
 ---
 
 ## Setting Alarm  
 1. Enter Mode 3 with **MODE**.  
-2. Press **INCREASE** to edit.  
-3. Adjust `HH:MM` using **INCREASE** and **OK**.  
+2. Press **UP** to edit.  
+3. Adjust `HH:MM` using **UP** and **OK**.  
 4. Alarm triggers buzzer when time matches; snooze with **SNOOZE/LED**.  
 
 ---
