@@ -12,13 +12,13 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 ### Display  
 - **6 x 7-Segment LEDs**: Arranged in an 88:88:88 format with two fixed colons (always on).  
   - **PORTD**: Outputs segment codes (a-g, dp).  
-  - **PORTC**: Scans the digits using pins **RC0, RC1, RC2, RC5, RC6, RC7**.  
-  - *Note*: Pins **RC3 (SCL)** and **RC4 (SDA)** are reserved for I2C, though unused in this project.  
+  - **PORTB&E**: Scans the digits using pins **RB0, RB1, RB2, RB3, RB4, RE0**.  
+  - *Note*: Pins **RC3 (SCL)** and **RC4 (SDA)** are reserved for I2C, though unused in this project(to expand the project in the future).  
 
 ### Peripherals  
 - **Temperature Sensor**: **LM35** connected to **AN7** (ADC channel 7) for temperature readings.  
-- **Buzzer**: Connected to **E2** for alarm sound output.  
-- **Lighting LED**: Connected to **C5**, toggled for illumination in Mode 0.  
+- **Buzzer**: Connected to **RE2** for alarm sound output.  
+- **Lighting LED**: Connected to **RC5**, toggled for illumination in Mode 0.  
 - **Battery Monitoring**: Voltage monitored via **AN6** (ADC channel 6) for low battery detection.  
 
 ### Buttons  
@@ -38,7 +38,7 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 ### Mode 3: Set Alarm  
 - **Display**: `T-:HH:MM` (e.g., T-:07:30 for 7:30 AM).  
 - Edit with **UP** and confirm with **OK**.  
-- Buzzer on **E2** triggers when time matches; press **SNOOZE/LED** to snooze for 10 minutes.  
+- Buzzer on **RC2** triggers when time matches; press **SNOOZE/LED** to snooze for 10 minutes.  
 
 ### Mode 4: Set Time and Date  
 - **Step 1**: Set time (`HH:MM:SS`).  
