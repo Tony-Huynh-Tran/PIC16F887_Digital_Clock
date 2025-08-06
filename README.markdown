@@ -22,7 +22,8 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
 - **Battery Monitoring**: Voltage monitored via **AN6** (ADC channel 6) for low battery detection.  
 
 ### Buttons  
-- **MODE**: **RB0** – Cycles through modes (0 → 1 → 2 → 3 →Cn`: Sunday  
+- **MODE**: **RB0** – Cycles through modes (0 → 1 → 2 → 3 →
+  - `Cn`: Sunday  
   - `T2`: Monday  
   - `T3`: Tuesday  
   - `T4`: Wednesday  
