@@ -32,7 +32,7 @@ This digital clock is built around the **PIC16F887 microcontroller** and integra
   - `T7`: Saturday  
 
 ### Mode 2: Temperature  
-- **Display**: `N-:XXC` (e.g., N-:27C for 27°C).  
+- **Display**: `N-:XX°C` (e.g., N-:27C for 27°C).  
 - Temperature is measured using the LM35 sensor via ADC on **AN7**.  
 
 ### Mode 3: Set Alarm  
