@@ -1,5 +1,5 @@
 # DIGITAL CLOCK /|\  
-*reation by Tony Huynh Tran*
+*Creation by Tony Huynh Tran*
 
 ---
 
