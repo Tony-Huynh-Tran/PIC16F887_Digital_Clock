@@ -118,6 +118,6 @@ void quet_led(unsigned int8 d1, unsigned int8 d2, unsigned int8 d3, unsigned int
 
 ## Creator’s Mark  
 Crafted with precision and care by **Tony Huynh Tran** on August 6, 2025.  
-A subtle signature woven into time: **/|\\** – a symbol of balance and creativity.  
+
 
 *“Time ticks forward, but its rhythm is ours to shape.”*
